@@ -1,0 +1,22 @@
+footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2F304F;
+  border-radius: 10px 10px 0 0;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 4rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/*# sourceMappingURL=Footer.css.map */

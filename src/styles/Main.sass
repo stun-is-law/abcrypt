@@ -1,0 +1,83 @@
+@import "./colors.sass"
+
+main
+    display: flex
+    gap: 1rem
+    color: $whiteColor
+    padding-top: 5rem
+    padding-left: 10%
+    padding-right: 10%
+    .diamond-line-vertical
+        padding: 1rem
+    .left-column
+        flex: 1
+        h1
+            line-height: 150%
+            font-size: $fontSizeH1
+        .background-gradient-violet
+            background: $gtPrimarySecondaryText
+            border-radius: .4rem
+            padding-left: .4rem
+            padding-right: .4rem
+            padding-bottom: .3rem
+            letter-spacing: .25rem
+            span
+                color: $bgcColor
+        ul
+            list-style: none
+            padding-left: 1rem
+            li
+                align-items: center
+                display: flex
+                gap: 1rem
+                p
+                    font-size: $fontSizeP
+
+    .right-column
+        flex: 1
+        h1
+            line-height: 150%
+            text-align: center
+            font-size: $fontSizeH1
+            .text-violet-gradient
+                background: $gtPrimarySecondaryText
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                background-clip: text
+                text-fill-color: transparent
+        .textarea-dobule-background
+            margin: 2.5rem auto
+            width: 80%
+            position: relative
+            // background: $gtPrimarySecondaryFadeOut
+            border-radius: .5rem
+            textarea
+                z-index: 100
+                border-radius: .5rem
+                width: 100%
+                background: $gtPrimarySecondaryText
+                border: none
+                color: $whiteColor
+                display: block
+                font-family: 'Encode Sans', sans-serif
+                font-size: $fontSizeP
+                height: 10rem
+                padding: 1rem
+                resize: none
+                transition: all 200ms ease-out
+                &::placeholder
+                    color: white
+                    opacity: .6
+                &:hover
+                    outline: none
+                    transform: scale(1.02)
+                    border-bottom: 2px solid $whiteColor
+                    border-left: 2px solid $whiteColor
+                    &::placeholder
+                        opacity: 1
+                &:focus
+                    border-bottom: 2px solid $whiteColor
+                    border-left: 2px solid $whiteColor
+                    outline: none
+                    &::placeholder
+                        opacity: 1

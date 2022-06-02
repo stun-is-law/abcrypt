@@ -1,0 +1,72 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 2.4rem;
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+header .logo img {
+  width: 16rem;
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+}
+
+header .logo img:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  padding: 0.3rem;
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+  color: #999999;
+}
+
+header nav ul .navigation-underline {
+  position: relative;
+  display: block;
+  height: .5rem;
+  width: .5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.5) 94.21%);
+  margin: .3rem;
+}
+
+header nav ul .navigation-underline::after {
+  display: block;
+  content: "";
+  position: absoulte;
+  width: 80px;
+  height: 3px;
+  display: block;
+  background: linear-gradient(106.61deg, #5200FF 11.49%, rgba(204, 0, 255, 0) 80.91%);
+  -webkit-transform: rotate(-45deg) translate(14px, -24px);
+          transform: rotate(-45deg) translate(14px, -24px);
+}
+/*# sourceMappingURL=Header.css.map */

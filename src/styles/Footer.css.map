@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACH,WAAW,EAAE,MAAM;EACnB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,KAAK,EAAE,IAAI;EACX,gBAAgB,ECNJ,OAAO;EDOnB,aAAa,EAAE,aAAa;EAC5B,KAAK,EAAE,IAAwB;EAC/B,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,GAAG;EACjB,aAAa,EAAE,GAAG;CAAG",
+    "sources": [
+        "Footer.sass",
+        "colors.sass"
+    ],
+    "names": [],
+    "file": "Footer.css"
+}

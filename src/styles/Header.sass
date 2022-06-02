@@ -1,0 +1,57 @@
+@import "./colors.sass"
+
+header
+    display: flex
+    justify-content: space-between
+    padding-left: 8%
+    padding-right: 8%
+    padding-top: 2.4rem
+    .logo
+        cursor: pointer
+        img
+            width: 16rem
+            transition: 150ms ease-out
+            &:hover
+                transform: scale(1.07)
+    nav
+        ul
+            display: flex
+            gap: 4rem
+            list-style-type: none
+            li
+                a
+                    padding: 0.3rem
+                    position: relative
+                    color: $whiteColor
+                    font-size: 1.5rem
+                    text-decoration: none
+                    transition: 150ms ease-out
+                    &:hover, &:focus
+                        color: darken($whiteColor, 40%)
+                // .active::after
+                //     content: ''
+                //     width: 100px
+                //     height: 100px
+                //     background-image: url("../img/underline-gradient-left-fade.svg")
+                //     background-repeat: no-repeat
+                //     top: 2.2rem
+                //     left: -0.4rem
+                //     position: absolute
+                //     display: inline-block
+            .navigation-underline
+                position: relative
+                display: block
+                height: .5rem
+                width: .5rem
+                transform: rotate(45deg)
+                background: $gtPrimarySecondaryText
+                margin: .3rem
+                &::after
+                    display: block
+                    content: ""
+                    position: absoulte
+                    width: 80px
+                    height: 3px
+                    display: block
+                    background: $gtPrimarySecondaryFadeOut
+                    transform: rotate(-45deg) translate(14px, -24px)

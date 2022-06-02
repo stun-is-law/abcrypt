@@ -1,7 +1,17 @@
 import "../styles/App.css";
+// import logoSmall from "../img/logo_small_gradient-filled_text.svg";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
