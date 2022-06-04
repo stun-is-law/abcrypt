@@ -14,59 +14,65 @@ header .logo {
   cursor: pointer;
 }
 
-header .logo img {
-  width: 16rem;
-  -webkit-transition: 150ms ease-out;
-  transition: 150ms ease-out;
+header .logo a:hover, header .logo a:focus {
+  outline: none;
 }
 
-header .logo img:hover {
+header .logo a:hover img, header .logo a:focus img {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+
+header .logo a img {
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+  width: 15rem;
 }
 
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   list-style-type: none;
 }
 
+header nav ul li {
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+}
+
 header nav ul li a {
+  background: -webkit-gradient(linear, left top, right top, color-stop(39%, #18192c), color-stop(50%, #300f85), color-stop(64%, #3b0aad), color-stop(77%, #4c03ea), color-stop(86%, #701be7), color-stop(92%, #a43ee3), to(rgba(255, 0, 210, 0.9)));
+  background: linear-gradient(90deg, #18192c 39%, #300f85 50%, #3b0aad 64%, #4c03ea 77%, #701be7 86%, #a43ee3 92%, rgba(255, 0, 210, 0.9) 100%);
+  background-position: left;
+  background-size: 400%;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.55rem;
   padding: 0.3rem;
   position: relative;
-  color: #fff;
-  font-size: 1.5rem;
+  text-align: center;
   text-decoration: none;
-  -webkit-transition: 150ms ease-out;
-  transition: 150ms ease-out;
+  -webkit-transition: font-weight 100ms ease-in, color 100ms ease-out, background-position 200ms ease-in-out;
+  transition: font-weight 100ms ease-in, color 100ms ease-out, background-position 200ms ease-in-out;
+}
+
+header nav ul li a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 header nav ul li a:hover, header nav ul li a:focus {
-  color: #999999;
-}
-
-header nav ul .navigation-underline {
-  position: relative;
-  display: block;
-  height: .5rem;
-  width: .5rem;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.5) 94.21%);
-  margin: .3rem;
-}
-
-header nav ul .navigation-underline::after {
-  display: block;
-  content: "";
-  position: absoulte;
-  width: 80px;
-  height: 3px;
-  display: block;
-  background: linear-gradient(106.61deg, #5200FF 11.49%, rgba(204, 0, 255, 0) 80.91%);
-  -webkit-transform: rotate(-45deg) translate(14px, -24px);
-          transform: rotate(-45deg) translate(14px, -24px);
+  background-position: right;
+  color: #18192C;
+  font-weight: bold;
+  outline: none;
 }
 /*# sourceMappingURL=Header.css.map */

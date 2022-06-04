@@ -6,24 +6,35 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <img src={logoTextSmall} alt="abcrypt logo" />
+        <a href="stanpages.com">
+          <img src={logoTextSmall} alt="abcrypt logo" />
+        </a>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="stanpages.com">encrypt</a>
+            <a href="stanpages.com" title="encrypt">
+              encrypt
+            </a>
+            <span className="navigation-underline"></span>
           </li>
           <li>
-            <a href="stanpages.com" className="active">
+            <a href="stanpages.com" title="about">
               about
             </a>
             <span className="navigation-underline"></span>
           </li>
           <li>
-            <a href="stanpages.com">security</a>
+            <a href="stanpages.com" title="security">
+              security
+            </a>
+            <span className="navigation-underline"></span>
           </li>
           <li>
-            <a href="stanpages.com">contact</a>
+            <a href="stanpages.com" title="contact">
+              contact
+            </a>
+            <span className="navigation-underline"></span>
           </li>
         </ul>
       </nav>

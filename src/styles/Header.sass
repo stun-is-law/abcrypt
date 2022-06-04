@@ -1,4 +1,4 @@
-@import "./colors.sass"
+@import "./variables.sass"
 
 header
     display: flex
@@ -8,50 +8,45 @@ header
     padding-top: 2.4rem
     .logo
         cursor: pointer
-        img
-            width: 16rem
-            transition: 150ms ease-out
-            &:hover
-                transform: scale(1.07)
+        a
+            &:hover, &:focus
+                outline: none
+                img
+                    transform: scale(1.07)
+            img
+                transition: 150ms ease-out
+                width: 15rem
     nav
         ul
             display: flex
-            gap: 4rem
+            gap: 3rem
             list-style-type: none
             li
+                display: inline-block
+                font-size: 0
+                position: relative
                 a
+                    background: $gtPrimarySecondaryAnimation
+                    background-position: left
+                    background-size: 400%
+                    border-radius: $borderRadiusNav
+                    color: $whiteColor
+                    display: inline-block
+                    font-size: $fontSizeNav
                     padding: 0.3rem
                     position: relative
-                    color: $whiteColor
-                    font-size: 1.5rem
+                    text-align: center
                     text-decoration: none
-                    transition: 150ms ease-out
+                    transition: font-weight 100ms ease-in, color 100ms ease-out, background-position 200ms ease-in-out
+                    &::before
+                        display: block
+                        content: attr(title)
+                        font-weight: bold
+                        height: 0
+                        overflow: hidden
+                        visibility: hidden
                     &:hover, &:focus
-                        color: darken($whiteColor, 40%)
-                // .active::after
-                //     content: ''
-                //     width: 100px
-                //     height: 100px
-                //     background-image: url("../img/underline-gradient-left-fade.svg")
-                //     background-repeat: no-repeat
-                //     top: 2.2rem
-                //     left: -0.4rem
-                //     position: absolute
-                //     display: inline-block
-            .navigation-underline
-                position: relative
-                display: block
-                height: .5rem
-                width: .5rem
-                transform: rotate(45deg)
-                background: $gtPrimarySecondaryText
-                margin: .3rem
-                &::after
-                    display: block
-                    content: ""
-                    position: absoulte
-                    width: 80px
-                    height: 3px
-                    display: block
-                    background: $gtPrimarySecondaryFadeOut
-                    transform: rotate(-45deg) translate(14px, -24px)
+                        background-position: right
+                        color: $bgcColor
+                        font-weight: bold
+                        outline: none

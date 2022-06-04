@@ -1,28 +1,43 @@
-@import "./colors.sass"
+@import "./variables.sass"
+
+@mixin textGradient($gradient)
+    background: $gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
 
 main
-    display: flex
-    gap: 1rem
+    align-items: stretch
     color: $whiteColor
-    padding-top: 5rem
+    display: flex
+    gap: 2rem
     padding-left: 10%
     padding-right: 10%
-    .diamond-line-vertical
-        padding: 1rem
+    padding-top: 5rem
+    position: relative
+    span.vertical-line
+        background: $gtPrimarySecondaryFadeOutVertical
+        display: flex
+        margin-left: 6px
+        margin-top: 1rem
+        width: 4px
+    &::before
+        position: absolute
+        content: ""
+        width: 16px
+        height: 16px
+        transform: rotate(45deg)
+        background: $gtPrimarySecondaryText
     .left-column
         flex: 1
         h1
             line-height: 150%
             font-size: $fontSizeH1
-        .background-gradient-violet
-            background: $gtPrimarySecondaryText
-            border-radius: .4rem
-            padding-left: .4rem
-            padding-right: .4rem
-            padding-bottom: .3rem
+        span.text-gradient
+            @include textGradient($gtPrimarySecondaryText)
+            @include textGradient($gtPrimaryFadeOut)
             letter-spacing: .25rem
-            span
-                color: $bgcColor
         ul
             list-style: none
             padding-left: 1rem
@@ -30,54 +45,46 @@ main
                 align-items: center
                 display: flex
                 gap: 1rem
+                &::before
+                    content: ""
+                    width: .7rem
+                    height: .7rem
+                    transform: rotate(45deg)
+                    background: $gtPrimarySecondaryText
                 p
                     font-size: $fontSizeP
-
     .right-column
         flex: 1
         h1
             line-height: 150%
             text-align: center
             font-size: $fontSizeH1
-            .text-violet-gradient
-                background: $gtPrimarySecondaryText
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
-                background-clip: text
-                text-fill-color: transparent
-        .textarea-dobule-background
+        span.text-gradient
+            // @include textGradient($gtPrimarySecondaryText)
+            @include textGradient($gtPrimaryFadeOut)
+        textarea
+            background: $gtPrimaryFadeOut
+            border-bottom: 2px solid $bgcColor
+            border-left: 2px solid $bgcColor
+            border-right: none
+            border-top: none
+            border-radius: $borderRadiusTextarea
+            color: $whiteColor
+            display: block
+            font-family: 'Encode Sans', sans-serif
+            font-size: $fontSizeP
+            height: 10rem
             margin: 2.5rem auto
+            padding: 1rem
+            resize: none
+            transition: transform 200ms ease-out
             width: 80%
-            position: relative
-            // background: $gtPrimarySecondaryFadeOut
-            border-radius: .5rem
-            textarea
-                z-index: 100
-                border-radius: .5rem
-                width: 100%
-                background: $gtPrimarySecondaryText
-                border: none
+            &::placeholder
                 color: $whiteColor
-                display: block
-                font-family: 'Encode Sans', sans-serif
-                font-size: $fontSizeP
-                height: 10rem
-                padding: 1rem
-                resize: none
-                transition: all 200ms ease-out
+                opacity: .6
+            &:hover, &:focus
+                outline: none
+                border-bottom: 2px solid $whiteColor
+                border-left: 2px solid $whiteColor
                 &::placeholder
-                    color: white
-                    opacity: .6
-                &:hover
-                    outline: none
-                    transform: scale(1.02)
-                    border-bottom: 2px solid $whiteColor
-                    border-left: 2px solid $whiteColor
-                    &::placeholder
-                        opacity: 1
-                &:focus
-                    border-bottom: 2px solid $whiteColor
-                    border-left: 2px solid $whiteColor
-                    outline: none
-                    &::placeholder
-                        opacity: 1
+                    opacity: 1
