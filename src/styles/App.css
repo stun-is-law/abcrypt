@@ -12,6 +12,8 @@ body {
 .App {
   background-color: #18192C;
   min-height: 100vh;
+  padding-bottom: 6rem;
+  position: relative;
 }
 
 .main-menu {

@@ -2,6 +2,10 @@ main {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,11 +13,21 @@ main {
   gap: 2rem;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 5rem;
+  margin-top: 4rem;
   position: relative;
 }
 
-main span.vertical-line {
+main .left-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .left-column span.vertical-line {
   background: -webkit-gradient(linear, left top, left bottom, from(#4c03ea), color-stop(26%, rgba(96, 9, 232, 0.8)), color-stop(54%, rgba(122, 17, 229, 0.5)), color-stop(80%, rgba(168, 31, 223, 0.3)), color-stop(93%, rgba(209, 43, 218, 0.2)), to(rgba(246, 54, 214, 0)));
   background: linear-gradient(180deg, #4c03ea 0%, rgba(96, 9, 232, 0.8) 26%, rgba(122, 17, 229, 0.5) 54%, rgba(168, 31, 223, 0.3) 80%, rgba(209, 43, 218, 0.2) 93%, rgba(246, 54, 214, 0) 100%);
   display: -webkit-box;
@@ -21,10 +35,10 @@ main span.vertical-line {
   display: flex;
   margin-left: 6px;
   margin-top: 1rem;
-  width: 4px;
+  width: 5px;
 }
 
-main::before {
+main .left-column::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -34,18 +48,12 @@ main::before {
   background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
 }
 
-main .left-column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-main .left-column h1 {
+main .left-column .description h1 {
   line-height: 150%;
   font-size: 3rem;
 }
 
-main .left-column span.text-gradient {
+main .left-column .description span.text-gradient {
   background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,12 +68,12 @@ main .left-column span.text-gradient {
   letter-spacing: .25rem;
 }
 
-main .left-column ul {
+main .left-column .description ul {
   list-style: none;
   padding-left: 1rem;
 }
 
-main .left-column ul li {
+main .left-column .description ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -75,7 +83,7 @@ main .left-column ul li {
   gap: 1rem;
 }
 
-main .left-column ul li::before {
+main .left-column .description ul li::before {
   content: "";
   width: .7rem;
   height: .7rem;
@@ -84,7 +92,7 @@ main .left-column ul li::before {
   background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
 }
 
-main .left-column ul li p {
+main .left-column .description ul li p {
   font-size: 1.3rem;
 }
 
@@ -172,5 +180,14 @@ main .right-column textarea:hover::-ms-input-placeholder, main .right-column tex
 
 main .right-column textarea:hover::placeholder, main .right-column textarea:focus::placeholder {
   opacity: 1;
+}
+
+@media (min-width: 1250px) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

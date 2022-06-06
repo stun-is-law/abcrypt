@@ -1,5 +1,12 @@
 @import "./variables.sass"
 
+@mixin textGradient($gradient)
+    background: $gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+
 *,
 *::before,
 *::after
@@ -11,6 +18,8 @@ body
 .App
     background-color: $bgcColor
     min-height: 100vh
+    padding-bottom: 6rem
+    position: relative
 
 .main-menu
     padding: 2rem

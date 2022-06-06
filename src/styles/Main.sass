@@ -1,58 +1,57 @@
 @import "./variables.sass"
 
-@mixin textGradient($gradient)
-    background: $gradient
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
-    text-fill-color: transparent
-
+// cross-platform
 main
     align-items: stretch
+    flex-direction: column-reverse
     color: $whiteColor
     display: flex
+    margin-bottom: 5rem
     gap: 2rem
     padding-left: 10%
     padding-right: 10%
-    padding-top: 5rem
+    margin-top: 4rem
     position: relative
-    span.vertical-line
-        background: $gtPrimarySecondaryFadeOutVertical
-        display: flex
-        margin-left: 6px
-        margin-top: 1rem
-        width: 4px
-    &::before
-        position: absolute
-        content: ""
-        width: 16px
-        height: 16px
-        transform: rotate(45deg)
-        background: $gtPrimarySecondaryText
     .left-column
+        display: flex
+        gap: 2rem
         flex: 1
-        h1
-            line-height: 150%
-            font-size: $fontSizeH1
-        span.text-gradient
-            @include textGradient($gtPrimarySecondaryText)
-            @include textGradient($gtPrimaryFadeOut)
-            letter-spacing: .25rem
-        ul
-            list-style: none
-            padding-left: 1rem
-            li
-                align-items: center
-                display: flex
-                gap: 1rem
-                &::before
-                    content: ""
-                    width: .7rem
-                    height: .7rem
-                    transform: rotate(45deg)
-                    background: $gtPrimarySecondaryText
-                p
-                    font-size: $fontSizeP
+        span.vertical-line
+            background: $gtPrimarySecondaryFadeOutVertical
+            display: flex
+            margin-left: 6px
+            margin-top: 1rem
+            width: 5px
+        &::before
+            position: absolute
+            content: ""
+            width: 16px
+            height: 16px
+            transform: rotate(45deg)
+            background: $gtPrimarySecondaryText
+        .description
+            h1
+                line-height: 150%
+                font-size: $fontSizeH1
+            span.text-gradient
+                @include textGradient($gtPrimarySecondaryText)
+                @include textGradient($gtPrimaryFadeOut)
+                letter-spacing: .25rem
+            ul
+                list-style: none
+                padding-left: 1rem
+                li
+                    align-items: center
+                    display: flex
+                    gap: 1rem
+                    &::before
+                        content: ""
+                        width: .7rem
+                        height: .7rem
+                        transform: rotate(45deg)
+                        background: $gtPrimarySecondaryText
+                    p
+                        font-size: $fontSizeP
     .right-column
         flex: 1
         h1
@@ -88,3 +87,8 @@ main
                 border-left: 2px solid $whiteColor
                 &::placeholder
                     opacity: 1
+
+// desktop version
+@media (min-width: 1250px)
+    main
+        flex-direction: row

@@ -18,7 +18,7 @@ const Header = () => {
             </a>
             <span className="navigation-underline"></span>
           </li>
-          <li>
+          <li className="active">
             <a href="stanpages.com" title="about">
               about
             </a>

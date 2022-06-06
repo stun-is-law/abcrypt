@@ -1,21 +1,66 @@
 @import "./variables.sass"
 
+// cross-platform
 header
     display: flex
-    justify-content: space-between
     padding-left: 8%
     padding-right: 8%
-    padding-top: 2.4rem
-    .logo
-        cursor: pointer
+    nav
+        ul
+            display: flex
+            justify-content: space-evenly
+            list-style-type: none
+            padding: 0
+            li
+                text-align: center
+                a
+                    text-decoration: none
+
+// mobile version
+@media (max-width: 1249px)
+    header
+        background: $gtPrimarySecondaryText
+        padding-top: 1.5rem
+        padding-bottom: 1.5rem
+        .logo
+            display: none
+        nav
+            width: 100%
+            ul
+                flex-wrap: wrap
+                li
+                    border-radius: $borderRadiusNavMobile
+                    padding-top: 1.3rem
+                    padding-bottom: 1.3rem
+                    flex: 50%
+                    &.active
+                        background-color: $bgcColor
+                        a
+                            @include textGradient($gtPrimarySecondaryText)
+                    a
+                        color: $bgcColor
+                        font-size: $fontSizeNavMobile
+                        padding: 0.5rem
+                        font-weight: bold
+
+// desktop version
+@media (min-width: 1250px)
+    header
+        display: flex
+        justify-content: space-between
+        padding-left: 8%
+        padding-right: 8%
+        padding-top: 2.4rem
+        .logo
+            cursor: pointer
+        img
+            transition: 150ms ease-out
+            width: 15rem
         a
             &:hover, &:focus
                 outline: none
                 img
                     transform: scale(1.07)
-            img
-                transition: 150ms ease-out
-                width: 15rem
     nav
         ul
             display: flex
