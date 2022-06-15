@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/abcrypt/static/css/main.7b94e988.css",
+    "main.js": "/abcrypt/static/js/main.2a96f2cd.js",
+    "static/js/787.f35e915b.chunk.js": "/abcrypt/static/js/787.f35e915b.chunk.js",
+    "static/media/profile-photo-sqr.jpg": "/abcrypt/static/media/profile-photo-sqr.913ab171c1139219c9aa.jpg",
+    "static/media/mini-react.svg": "/abcrypt/static/media/mini-react.ec221e8ecf779d8aa1e7454bc4a8aceb.svg",
+    "static/media/mini-figma.svg": "/abcrypt/static/media/mini-figma.cf4f2fcf3073f206f31745547f7b6dd4.svg",
+    "static/media/logo-small-gradient-filled-text.svg": "/abcrypt/static/media/logo-small-gradient-filled-text.a794c3e31b05d61cdd2672be563474c7.svg",
+    "static/media/mini-javascript.svg": "/abcrypt/static/media/mini-javascript.1f1a945d904d5eb1ffcf596da24d11c8.svg",
+    "static/media/mini-css.svg": "/abcrypt/static/media/mini-css.b65827a8465b3dc4008948c2b1a1a78f.svg",
+    "static/media/mini-html.svg": "/abcrypt/static/media/mini-html.b06353bee1f5ef3af34bc47dea7878a8.svg",
+    "static/media/icon_instagram.svg": "/abcrypt/static/media/icon_instagram.6ed2cb5264b2240800b4eca149b65721.svg",
+    "index.html": "/abcrypt/index.html",
+    "static/media/icon_github.svg": "/abcrypt/static/media/icon_github.04be58c17b3d5e9744424d414240dd85.svg",
+    "static/media/icon_linkedin.svg": "/abcrypt/static/media/icon_linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
+    "main.7b94e988.css.map": "/abcrypt/static/css/main.7b94e988.css.map",
+    "main.2a96f2cd.js.map": "/abcrypt/static/js/main.2a96f2cd.js.map",
+    "787.f35e915b.chunk.js.map": "/abcrypt/static/js/787.f35e915b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b94e988.css",
+    "static/js/main.2a96f2cd.js"
+  ]
+}
