@@ -7,35 +7,31 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <NavLink to="/">
+        <NavLink to="/abcrypt/" exact="true">
           <img src={logoTextSmall} alt="abcrypt logo" />
         </NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <NavLink to="/" exact="true" title="encrypt">
+            <NavLink to="/abcrypt/" exact="true" title="encrypt">
               encrypt
             </NavLink>
-            <span className="navigation-underline"></span>
           </li>
           <li>
-            <NavLink to="/about" title="about">
+            <NavLink to="/abcrypt/about" title="about">
               about
             </NavLink>
-            <span className="navigation-underline"></span>
           </li>
           <li>
-            <NavLink to="/security" title="security">
+            <NavLink to="/abcrypt/security" title="security">
               security
             </NavLink>
-            <span className="navigation-underline"></span>
           </li>
           <li>
-            <NavLink to="/contact" title="contact">
+            <NavLink to="/abcrypt/contact" title="contact">
               contact
             </NavLink>
-            <span className="navigation-underline"></span>
           </li>
         </ul>
       </nav>

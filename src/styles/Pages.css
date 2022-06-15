@@ -300,6 +300,20 @@ p {
   }
 }
 
+main.page-not-found h1 {
+  color: #fff;
+  padding: 5rem 8%;
+  line-height: 150%;
+}
+
+main.page-not-found h1 span.text-gradient {
+  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 main.security, main.about, main.contact {
   color: #fff;
   padding-left: 12%;
@@ -314,14 +328,6 @@ main.security h1, main.about h1, main.contact h1 {
   background-clip: text;
   text-fill-color: transparent;
   display: inline-block;
-}
-
-main.security h1 span.text-gradient, main.about h1 span.text-gradient, main.contact h1 span.text-gradient {
-  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 
 main.security p, main.about p, main.contact p {

@@ -1,3 +1,9 @@
+.page-not-found h1 {
+  color: #fff;
+  padding: 5rem 8%;
+  line-height: 150%;
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2rem, 7vw, 3.5rem);
 }
 
 p {
@@ -24,14 +30,6 @@ p {
 .App {
   background-color: #18192C;
   min-height: 100vh;
-}
-
-.main-menu {
-  padding: 2rem;
-}
-
-.main-menu .logo {
-  margin-left: 2rem;
 }
 
 .bold {

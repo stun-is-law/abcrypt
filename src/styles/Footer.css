@@ -71,11 +71,11 @@ footer .socials ul {
 }
 
 footer .socials ul li {
-  padding: 0 .5rem;
+  padding: 0 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.6rem;
+  gap: 0.2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

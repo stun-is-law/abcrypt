@@ -15,10 +15,10 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/security" element={<Security />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/abcrypt" element={<Main />}></Route>
+          <Route path="/abcrypt/about" element={<About />}></Route>
+          <Route path="/abcrypt/security" element={<Security />}></Route>
+          <Route path="/abcrypt/contact" element={<Contact />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
         <Footer />

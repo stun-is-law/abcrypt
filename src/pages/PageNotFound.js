@@ -5,7 +5,7 @@ const PageNotFound = () => {
   return (
     <main className="page-not-found">
       <h1>
-        Unfortunately, <span className="text-gradient">the Page</span> does not
+        Unfortunately, <span className="text-gradient">the page</span> does not
         exist! :(
       </h1>
     </main>

@@ -2,6 +2,13 @@
 @import "./App.sass"
 @import "./Animations.sass"
 
+main.page-not-found h1
+    color: $whiteColor
+    padding: 5rem 8%
+    line-height: 150%
+    span.text-gradient
+        @include textGradient($gtPrimarySecondaryText)
+
 main.security, main.about, main.contact
     color: $whiteColor
     padding-left: 12%
@@ -10,8 +17,6 @@ main.security, main.about, main.contact
     h1
         @include textGradient($gtPrimarySecondaryText)
         display: inline-block
-        span.text-gradient
-            @include textGradient($gtPrimarySecondaryText)
     p
         line-height: 170%
     h2
