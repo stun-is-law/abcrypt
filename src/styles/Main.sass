@@ -1,7 +1,8 @@
 @import "./variables.sass"
+@import "./App.sass"
 
 // cross-platform
-main
+main.encrypt
     align-items: stretch
     flex-direction: column-reverse
     color: $whiteColor
@@ -10,7 +11,7 @@ main
     gap: 2rem
     padding-left: 10%
     padding-right: 10%
-    margin-top: 4rem
+    margin-top: 2rem
     position: relative
     .left-column
         display: flex
@@ -30,11 +31,9 @@ main
             transform: rotate(45deg)
             background: $gtPrimarySecondaryText
         .description
-            h1
+            h2
                 line-height: 150%
-                font-size: $fontSizeH1
             span.text-gradient
-                @include textGradient($gtPrimarySecondaryText)
                 @include textGradient($gtPrimaryFadeOut)
                 letter-spacing: .25rem
             ul
@@ -50,16 +49,12 @@ main
                         height: .7rem
                         transform: rotate(45deg)
                         background: $gtPrimarySecondaryText
-                    p
-                        font-size: $fontSizeP
     .right-column
         flex: 1
-        h1
+        h2
             line-height: 150%
             text-align: center
-            font-size: $fontSizeH1
         span.text-gradient
-            // @include textGradient($gtPrimarySecondaryText)
             @include textGradient($gtPrimaryFadeOut)
         textarea
             background: $gtPrimaryFadeOut
@@ -71,7 +66,7 @@ main
             color: $whiteColor
             display: block
             font-family: 'Encode Sans', sans-serif
-            font-size: $fontSizeP
+            font-size: clamp($fsPMin, $fsPOpt, $fsPMax)
             height: 10rem
             margin: 2.5rem auto
             padding: 1rem
@@ -88,7 +83,14 @@ main
                 &::placeholder
                     opacity: 1
 
+// mobile version
+@media (max-width: 1249px)
+    main.encrypt
+        padding-left: 5%
+        padding-right: 5%
+
 // desktop version
 @media (min-width: 1250px)
-    main
+    main.encrypt
         flex-direction: row
+        margin-top: 4rem

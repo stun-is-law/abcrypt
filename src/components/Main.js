@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../styles/Main.css";
 
 const alphabet = [
-  "a",
   "#",
   "d",
   "C",
@@ -10,6 +9,7 @@ const alphabet = [
   "'",
   "c",
   "1",
+  "a",
   "e",
   "(",
   "n",
@@ -121,51 +121,59 @@ class Main extends Component {
     this.setState({ decryptedMessage, encryptedMessage: input });
   };
 
+  componentDidUpdate() {
+    if (
+      this.state.decryptedMessage === "" &&
+      this.state.encryptedMessage !== ""
+    )
+      this.setState({ encryptedMessage: "" });
+  }
+
   render() {
     return (
-      <main>
+      <main className="encrypt">
         <div className="left-column">
           <span className="vertical-line"></span>
           <div className="description">
-            <h1>
+            <h2>
               Your secrets are safe with{" "}
               <span className="text-gradient">abcrypt</span>
-            </h1>
+            </h2>
             <ul>
               <li>
                 <p>
-                  <span className="bold">advanced crypting technology</span> so
-                  hard to crack
+                  <span className="bold">unlimited and free access</span> to all
+                  functions
                 </p>
               </li>
               <li>
                 <p>
-                  create <span className="bold">random, personal key</span> and
-                  maximize security
+                  chat and{"  "}
+                  <span className="bold">have fun</span> with your friends
                 </p>
               </li>
               <li>
                 <p>
-                  choose from <span className="bold">one hundred</span> pre-made
-                  key templates
+                  <span className="bold">no more annoying ads</span> popping up
+                  everywhere
                 </p>
               </li>
             </ul>
           </div>
         </div>
         <div className="right-column">
-          <h1>
+          <h2>
             Try <span className="text-gradient">it</span> yourself!
-          </h1>
+          </h2>
           <textarea
             value={this.state.decryptedMessage}
             onChange={this.handleEncrypt}
-            placeholder="type or paste text to encrypt here"
+            placeholder="type or paste text to ENCRYPT here"
           ></textarea>
           <textarea
             value={this.state.encryptedMessage}
             onChange={this.handleDecrypt}
-            placeholder="encrypted text will appear here"
+            placeholder="type or paste text to DECRYPT here"
           ></textarea>
         </div>
       </main>

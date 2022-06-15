@@ -1,3 +1,35 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.App {
+  background-color: #18192C;
+  min-height: 100vh;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5,22 +37,103 @@ footer {
   width: 100%;
   background-color: #2F304F;
   border-radius: 10px 10px 0 0;
-  color: #666666;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  min-height: 5rem;
-  padding-left: 10%;
-  padding-right: 10%;
+  min-height: 4rem;
+  margin-top: 6rem;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
-footer div:last-child {
-  text-align: right;
+footer p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  display: block;
+  text-align: center;
+}
+
+footer .socials {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer .socials ul {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+footer .socials ul li {
+  padding: 0 .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .socials ul li img {
+  display: block;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(337deg) brightness(105%) contrast(103%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(337deg) brightness(105%) contrast(103%);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+footer .socials .link {
+  background: -webkit-gradient(linear, left top, right top, color-stop(39%, #ffffff), color-stop(64%, #3b0aad), color-stop(77%, #4c03ea), color-stop(86%, #701be7), color-stop(92%, #a43ee3), to(rgba(255, 0, 210, 0.9)));
+  background: linear-gradient(90deg, #ffffff 39%, #3b0aad 64%, #4c03ea 77%, #701be7 86%, #a43ee3 92%, rgba(255, 0, 210, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  background-size: 400%;
+  background-position: left;
+}
+
+footer .socials .link:hover, footer .socials .link:focus {
+  background-position: right;
+  -webkit-transform: translate(0.2rem, 0);
+          transform: translate(0.2rem, 0);
+  outline: none;
+}
+
+footer .text-gradient {
+  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@media (max-width: 1249px) {
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

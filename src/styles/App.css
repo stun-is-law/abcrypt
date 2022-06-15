@@ -9,22 +9,24 @@ body {
   font-family: 'Encode Sans', sans-serif;
 }
 
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
 .App {
   background-color: #18192C;
   min-height: 100vh;
-  padding-bottom: 6rem;
-  position: relative;
 }
 
-.main-menu {
-  padding: 2rem;
-}
-
-.main-menu .logo {
-  margin-left: 2rem;
-}
-
-span.bold {
+.bold {
   font-weight: 700;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,0 +1,88 @@
+@import "./variables.sass"
+@import "./App.sass"
+@import "./Animations.sass"
+
+main.security, main.about, main.contact
+    color: $whiteColor
+    padding-left: 12%
+    padding-right: 12%
+    padding-top: 2rem
+    h1
+        @include textGradient($gtPrimarySecondaryText)
+        display: inline-block
+        span.text-gradient
+            @include textGradient($gtPrimarySecondaryText)
+    p
+        line-height: 170%
+    h2
+        margin-top: 3rem
+    .author
+        display: flex
+        gap: 2rem
+        &>img
+            display: block
+            width: 15rem
+            height: 15rem
+            position: relative
+            border-radius: 3rem
+        .description
+            line-height: 170%
+            flex: 33%
+            margin: 0
+        .socials
+            flex: 1
+            h2
+                margin: 0
+            img
+                display: block
+                filter: $frWhite
+                width: 1.7rem
+                height: 1.7rem
+            &::before
+                content: "See more:"
+                font-size: clamp($fsPMin, $fsPOpt, $fsPMax+.4rem)
+        .minis
+            display: flex
+            justify-content: space-evenly
+            flex-wrap: wrap
+            padding: 1rem
+            gap: 1rem
+            img
+                &:nth-child(1)
+                    @include animation($name: minisHtml)
+                &:nth-child(2)
+                    @include animation($name: minisCss)
+                &:nth-child(3)
+                    @include animation($name: minisJs)
+                &:nth-child(4)
+                    @include animation($name: minisReact)
+                &:nth-child(5)
+                    @include animation($name: minisFigma)
+    ul
+        padding-left: 0
+        list-style: none
+        li
+            padding: .5rem
+            display: flex
+            gap: 1rem
+    .link
+        @include textGradient($gtWhitePrimarySecondaryAnimation)
+        color: $whiteColor
+        text-decoration: none
+        transition: all 300ms ease-out
+        background-size: 400%
+        background-position: left
+        &:hover, &:focus
+            background-position: right
+            transform: translate(.2rem, 0)
+            outline: none
+
+// mobile version
+@media (max-width: 1249px)
+    .author
+        flex-direction: column
+
+// desktop verion
+@media (min-width: 1250px)
+    .author
+        align-items: center

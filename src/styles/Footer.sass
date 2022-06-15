@@ -1,18 +1,60 @@
 @import "./variables.sass"
+@import "./App.sass"
 
 footer
     align-items: center
     width: 100%
     background-color: $bgcLightColor
     border-radius: 10px 10px 0 0
-    color: darken($whiteColor, 60%)
+    color: $whiteColor
     display: flex
     justify-content: space-between
-    position: absolute
-    left: 0
-    bottom: 0
-    min-height: 5rem
-    padding-left: 10%
-    padding-right: 10%
-    div:last-child
-        text-align: right
+    min-height: 4rem
+    margin-top: 6rem
+    padding-left: 8%
+    padding-right: 8%
+    p
+        font-size: clamp($fsFooterMin, $fsFooterOpt, $fsFooterMax)
+        display: block
+        text-align: center
+    .socials
+        flex: 1
+        ul
+            padding-left: 0
+            display: flex
+            list-style: none
+            li
+                padding: 0 .5rem
+                display: flex
+                gap: 0.6rem
+                align-items: center
+                img
+                    display: block
+                    filter: $frWhite
+                    width: 1.3rem
+                    height: 1.3rem
+        .link
+            @include textGradient($gtWhitePrimarySecondaryAnimation)
+            color: $whiteColor
+            text-decoration: none
+            transition: all 250ms ease-out
+            background-size: 400%
+            background-position: left
+            &:hover, &:focus
+                background-position: right
+                transform: translate(.2rem, 0)
+                outline: none
+    .text-gradient
+        @include textGradient($gtPrimarySecondaryText)
+        font-weight: bold
+
+// mobile version
+@media (max-width: 1249px)
+    footer
+        justify-content: center
+        flex-direction: column
+        ul
+            justify-content: center
+
+// // desktop verion
+// @media (min-width: 1250px)

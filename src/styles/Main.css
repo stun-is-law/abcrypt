@@ -1,4 +1,36 @@
-main {
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.App {
+  background-color: #18192C;
+  min-height: 100vh;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+main.encrypt {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -10,14 +42,15 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 5rem;
   gap: 2rem;
   padding-left: 10%;
   padding-right: 10%;
-  margin-top: 4rem;
+  margin-top: 2rem;
   position: relative;
 }
 
-main .left-column {
+main.encrypt .left-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +60,7 @@ main .left-column {
           flex: 1;
 }
 
-main .left-column span.vertical-line {
+main.encrypt .left-column span.vertical-line {
   background: -webkit-gradient(linear, left top, left bottom, from(#4c03ea), color-stop(26%, rgba(96, 9, 232, 0.8)), color-stop(54%, rgba(122, 17, 229, 0.5)), color-stop(80%, rgba(168, 31, 223, 0.3)), color-stop(93%, rgba(209, 43, 218, 0.2)), to(rgba(246, 54, 214, 0)));
   background: linear-gradient(180deg, #4c03ea 0%, rgba(96, 9, 232, 0.8) 26%, rgba(122, 17, 229, 0.5) 54%, rgba(168, 31, 223, 0.3) 80%, rgba(209, 43, 218, 0.2) 93%, rgba(246, 54, 214, 0) 100%);
   display: -webkit-box;
@@ -38,7 +71,7 @@ main .left-column span.vertical-line {
   width: 5px;
 }
 
-main .left-column::before {
+main.encrypt .left-column::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -48,17 +81,11 @@ main .left-column::before {
   background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
 }
 
-main .left-column .description h1 {
+main.encrypt .left-column .description h2 {
   line-height: 150%;
-  font-size: 3rem;
 }
 
-main .left-column .description span.text-gradient {
-  background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+main.encrypt .left-column .description span.text-gradient {
   background: -webkit-gradient(linear, left top, right top, color-stop(2%, #4c03ea), color-stop(41%, rgba(97, 17, 232, 0.9)), color-stop(66%, rgba(105, 22, 232, 0.7)), color-stop(83%, rgba(114, 28, 231, 0.3)), color-stop(95%, rgba(124, 35, 230, 0.1)), to(rgba(129, 38, 230, 0.02)));
   background: linear-gradient(90deg, #4c03ea 2%, rgba(97, 17, 232, 0.9) 41%, rgba(105, 22, 232, 0.7) 66%, rgba(114, 28, 231, 0.3) 83%, rgba(124, 35, 230, 0.1) 95%, rgba(129, 38, 230, 0.02) 100%);
   -webkit-background-clip: text;
@@ -68,12 +95,12 @@ main .left-column .description span.text-gradient {
   letter-spacing: .25rem;
 }
 
-main .left-column .description ul {
+main.encrypt .left-column .description ul {
   list-style: none;
   padding-left: 1rem;
 }
 
-main .left-column .description ul li {
+main.encrypt .left-column .description ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -83,7 +110,7 @@ main .left-column .description ul li {
   gap: 1rem;
 }
 
-main .left-column .description ul li::before {
+main.encrypt .left-column .description ul li::before {
   content: "";
   width: .7rem;
   height: .7rem;
@@ -92,23 +119,18 @@ main .left-column .description ul li::before {
   background: linear-gradient(107.15deg, rgba(82, 0, 255, 0.9) 27.69%, rgba(255, 0, 210, 0.9) 94.21%);
 }
 
-main .left-column .description ul li p {
-  font-size: 1.3rem;
-}
-
-main .right-column {
+main.encrypt .right-column {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-main .right-column h1 {
+main.encrypt .right-column h2 {
   line-height: 150%;
   text-align: center;
-  font-size: 3rem;
 }
 
-main .right-column span.text-gradient {
+main.encrypt .right-column span.text-gradient {
   background: -webkit-gradient(linear, left top, right top, color-stop(2%, #4c03ea), color-stop(41%, rgba(97, 17, 232, 0.9)), color-stop(66%, rgba(105, 22, 232, 0.7)), color-stop(83%, rgba(114, 28, 231, 0.3)), color-stop(95%, rgba(124, 35, 230, 0.1)), to(rgba(129, 38, 230, 0.02)));
   background: linear-gradient(90deg, #4c03ea 2%, rgba(97, 17, 232, 0.9) 41%, rgba(105, 22, 232, 0.7) 66%, rgba(114, 28, 231, 0.3) 83%, rgba(124, 35, 230, 0.1) 95%, rgba(129, 38, 230, 0.02) 100%);
   -webkit-background-clip: text;
@@ -117,7 +139,7 @@ main .right-column span.text-gradient {
   text-fill-color: transparent;
 }
 
-main .right-column textarea {
+main.encrypt .right-column textarea {
   background: -webkit-gradient(linear, left top, right top, color-stop(2%, #4c03ea), color-stop(41%, rgba(97, 17, 232, 0.9)), color-stop(66%, rgba(105, 22, 232, 0.7)), color-stop(83%, rgba(114, 28, 231, 0.3)), color-stop(95%, rgba(124, 35, 230, 0.1)), to(rgba(129, 38, 230, 0.02)));
   background: linear-gradient(90deg, #4c03ea 2%, rgba(97, 17, 232, 0.9) 41%, rgba(105, 22, 232, 0.7) 66%, rgba(114, 28, 231, 0.3) 83%, rgba(124, 35, 230, 0.1) 95%, rgba(129, 38, 230, 0.02) 100%);
   border-bottom: 2px solid #18192C;
@@ -128,7 +150,7 @@ main .right-column textarea {
   color: #fff;
   display: block;
   font-family: 'Encode Sans', sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
   height: 10rem;
   margin: 2.5rem auto;
   padding: 1rem;
@@ -140,54 +162,62 @@ main .right-column textarea {
   width: 80%;
 }
 
-main .right-column textarea::-webkit-input-placeholder {
+main.encrypt .right-column textarea::-webkit-input-placeholder {
   color: #fff;
   opacity: .6;
 }
 
-main .right-column textarea:-ms-input-placeholder {
+main.encrypt .right-column textarea:-ms-input-placeholder {
   color: #fff;
   opacity: .6;
 }
 
-main .right-column textarea::-ms-input-placeholder {
+main.encrypt .right-column textarea::-ms-input-placeholder {
   color: #fff;
   opacity: .6;
 }
 
-main .right-column textarea::placeholder {
+main.encrypt .right-column textarea::placeholder {
   color: #fff;
   opacity: .6;
 }
 
-main .right-column textarea:hover, main .right-column textarea:focus {
+main.encrypt .right-column textarea:hover, main.encrypt .right-column textarea:focus {
   outline: none;
   border-bottom: 2px solid #fff;
   border-left: 2px solid #fff;
 }
 
-main .right-column textarea:hover::-webkit-input-placeholder, main .right-column textarea:focus::-webkit-input-placeholder {
+main.encrypt .right-column textarea:hover::-webkit-input-placeholder, main.encrypt .right-column textarea:focus::-webkit-input-placeholder {
   opacity: 1;
 }
 
-main .right-column textarea:hover:-ms-input-placeholder, main .right-column textarea:focus:-ms-input-placeholder {
+main.encrypt .right-column textarea:hover:-ms-input-placeholder, main.encrypt .right-column textarea:focus:-ms-input-placeholder {
   opacity: 1;
 }
 
-main .right-column textarea:hover::-ms-input-placeholder, main .right-column textarea:focus::-ms-input-placeholder {
+main.encrypt .right-column textarea:hover::-ms-input-placeholder, main.encrypt .right-column textarea:focus::-ms-input-placeholder {
   opacity: 1;
 }
 
-main .right-column textarea:hover::placeholder, main .right-column textarea:focus::placeholder {
+main.encrypt .right-column textarea:hover::placeholder, main.encrypt .right-column textarea:focus::placeholder {
   opacity: 1;
+}
+
+@media (max-width: 1249px) {
+  main.encrypt {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @media (min-width: 1250px) {
-  main {
+  main.encrypt {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 4rem;
   }
 }
 /*# sourceMappingURL=Main.css.map */

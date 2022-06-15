@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 import logoTextSmall from "../img/logo-small-gradient-filled-text.svg";
 
@@ -6,34 +7,34 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <a href="stanpages.com">
+        <NavLink to="/">
           <img src={logoTextSmall} alt="abcrypt logo" />
-        </a>
+        </NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="stanpages.com" title="encrypt">
+            <NavLink to="/" exact="true" title="encrypt">
               encrypt
-            </a>
+            </NavLink>
             <span className="navigation-underline"></span>
           </li>
-          <li className="active">
-            <a href="stanpages.com" title="about">
+          <li>
+            <NavLink to="/about" title="about">
               about
-            </a>
+            </NavLink>
             <span className="navigation-underline"></span>
           </li>
           <li>
-            <a href="stanpages.com" title="security">
+            <NavLink to="/security" title="security">
               security
-            </a>
+            </NavLink>
             <span className="navigation-underline"></span>
           </li>
           <li>
-            <a href="stanpages.com" title="contact">
+            <NavLink to="/contact" title="contact">
               contact
-            </a>
+            </NavLink>
             <span className="navigation-underline"></span>
           </li>
         </ul>

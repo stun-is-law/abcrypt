@@ -1,12 +1,5 @@
 @import "./variables.sass"
 
-@mixin textGradient($gradient)
-    background: $gradient
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
-    text-fill-color: transparent
-
 *,
 *::before,
 *::after
@@ -15,17 +8,33 @@
 body
     font-family: 'Encode Sans', sans-serif
 
+// global values
+h1
+    font-size: clamp($fsH1Min, $fsH1Opt, $fsH1Max)
+
+h2
+    font-size: clamp($fsH2Min, $fsH2Opt, $fsH2Max)
+
+p
+    font-size: clamp($fsPMin, $fsPOpt, $fsPMax)
+
 .App
     background-color: $bgcColor
     min-height: 100vh
-    padding-bottom: 6rem
-    position: relative
 
-.main-menu
-    padding: 2rem
-    .logo
-        margin-left: 2rem
-
-// to bold text
-span.bold
+.bold
     font-weight: 700
+
+// mixins
+@mixin textGradient($gradient)
+    background: $gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+
+@mixin animation($name, $duration: 5000ms, $timing: cubic, $iteration: infinite)
+    animation-name: $name
+    animation-duration: $duration
+    animation-timing-function: $timing
+    animation-iteration-count: $iteration
