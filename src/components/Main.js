@@ -16,6 +16,7 @@ const alphabet = [
   "3",
   "g",
   "G",
+  "A",
   "0",
   "D",
   "P",

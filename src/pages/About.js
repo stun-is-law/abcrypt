@@ -8,13 +8,8 @@ const About = () => {
       <h1>Why someone did this app?</h1>
       <p>
         This app was created to demonstrate my skills as a frontend developer.
-        The main goal was to create design, not mechanics. However, I believe
-        that encountering this site can be an entertaining experience for the
-        average user.
-      </p>
-      <p>
-        The source code for this app will be soon avaiable on my GitHub profile
-        with free license.
+        The main goal was to create design, not mechanics.However, I believe
+        exploring this site can be an entertaining experience, so enjoy!
       </p>
       <p>
         You can learn more about me and my other projects at{" "}

@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="author">
         <img src={profilePhoto} alt="author" />
         <p className="description">
-          Hi, I'm Stanley Jarocki, Junior Frontend Developer. If you see
+          Hi, I'm Junior Frontend Developer Stanley Jarocki. If you see
           potential here I'm open for collaboration and job offers.
         </p>
         <div className="minis">
